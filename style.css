@@ -7,13 +7,16 @@ body{
     height: 90vh;
     width: 100%;
     font-family: monospace;
-    background: url(s.jpg);
+    background:url(s.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
 #main{
     height: 90vh;
     width: 100%;
+
 }
  
 #nav{
@@ -24,46 +27,85 @@ body{
     justify-content:space-between;
     align-items: center; 
     backdrop-filter: blur(30px);
+    position:relative;
+    transition: 0.5s;
+}
+#nav:hover{
+    background-color: rgba(23, 23, 23, 0.857);
 }
 .logo{
     font-size:40px;
     font-weight: 700;
-    margin-left: 30px;
+    margin-left: 50px;
     color: rgb(242, 242, 242);
+    transition: 0.4s;
+    cursor: pointer;
 }
-.list{
+.logo:hover{
+    letter-spacing: 5px;
+    color: rgb(73, 255, 194);
+    text-shadow: 0 0 10px rgb(26, 255, 26),
+    0 0 20px rgb(26, 255, 26),
+    0 0 30px rgb(26, 255, 26);
+}
+.list {
     display: flex;
     align-items: center;
-    gap: 180px;
-    margin-right: 40px;
-    
-
+    gap: 150px;
+    margin-right: 40px; 
+    justify-content: space-between;
 }
 
-ul{
+.list ul{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 80px;
     margin: 5px;
-    font-size:large;
-    font-weight: bold ;
+    
 }
-span{
+
+.list ul a {
     color: rgb(12, 12, 12);
-    background-color: rgb(149, 205, 255);
-    padding: 2px 5px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bolder ;
+    color: azure;
+    transition: 0.4s;
+    text-decoration: none;
+    
+
 }
-button{
-    height: 40px;
-    width: 100px;
+.list ul  :hover{
+    color:rgb(0, 234, 255);
+    letter-spacing: 2px;
+    
+}
+.list button{
+    height: 45px;
+    width: 125px;
     border: none;
-    justify-items: flex-end;
-    box-sizing: border-box;
-    box-shadow: 1px 3px 5px rgb(158, 232, 255);
+    box-shadow: 0px 0px 5px rgb(33, 255, 92);
     border-radius: 5px;
-    background-color: none;
+    background-color: rgb(170, 253, 226);
+    letter-spacing: 1.5px;
+    transition: 0.4s;
+    font-weight: 900;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.list button:hover{
+    background-color:rgb(35, 115, 1) ;
+    border: 2px solid rgb(133, 255, 81);
+    cursor: pointer;
+    font-weight:10px;
+    color: azure;
+    letter-spacing: 3.5px;
+    box-shadow:  0 0 10px rgb(33, 255, 92), 0 0 30px rgb(33, 255, 92);
+}
+
 #box1{
     height: 92%;
     width: 100%;
@@ -78,10 +120,10 @@ button{
     height: 50%;
     width: 18%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     backdrop-filter: blur(3px);
     border: 2px solid snow;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .mainbox:hover{
     border-style:groove;
@@ -90,12 +132,111 @@ button{
     0 0 20px rgb(161, 228, 255),0 0 50px rgb(161, 228, 255),
     0 0 60px rgb(161, 228, 255);
     backdrop-filter: blur(15px);
+    background-color: rgb(91, 91, 91);
     cursor: pointer;
 
 }
-h1{
+.mainbox h1{
     text-align: center;
-    color: aliceblue;
+    color: rgb(236, 246, 255);
     letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: (64, 211, 1);
+    text-shadow: 0 0 10px rgb(64, 211, 1);
+    font-weight:bolder;
+    font-size: 35px;
 }
 
+.mainbox .inputbox{
+
+   margin-bottom: 20px;
+   height: 40px;
+   width: 97%;
+   position: relative;
+}
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(64, 211, 1);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 1px 2px 0px 8px;
+    box-shadow: 0 0 10px rgb(64, 211, 1);
+}
+.inputbox input::placeholder{
+    color: rgb(246, 246, 246);
+}
+.inputbox i{
+    position: absolute; 
+    right: 20px;
+    top: 30%;
+    transform: translate(30%);
+    color: rgb(227, 227, 227);
+    font-size: 18px;
+}
+
+.mainbox .remember{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+    font-size: 17px;
+    color: rgb(236, 255, 202);
+    font-weight: bolder;
+}
+.remember a{
+    color: rgb(236, 255, 202);
+    text-decoration: none;
+    font-weight: bolder;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.mainbox .register{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainbox .register p{
+
+
+    color: antiquewhite;
+    font-size: 15px;
+}
+.but{
+display: grid;
+place-content: center;
+}
+.mainbox .but button{
+    margin-top: 15px;
+    height: 38px;
+    width: 110px;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(33, 255, 92);
+    border-radius: 5px;
+    background-color: rgb(170, 253, 226);
+    transition: 0.4s;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainbox .but button:hover{
+    background-color:rgb(35, 115, 1) ;
+    border: 2px solid rgb(133, 255, 81);
+    cursor: pointer;
+    font-weight:10px;
+    color: azure;
+    letter-spacing: 2.5px;
+    box-shadow:  0 0 10px rgb(33, 255, 92), 0 0 30px rgb(33, 255, 92);
+}
+#box2{
+    text-align: center;
+    color:rgb(248, 255, 120);
+    font-size: small;
+}
